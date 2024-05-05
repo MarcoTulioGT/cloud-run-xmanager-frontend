@@ -138,6 +138,7 @@ const Table = () =>{
     })
     .sort((a, b) => {
       if (sortBy) {
+        console.log(sortBy)
 
         const compareValueA = typeof a[sortBy] === 'string' ? a[sortBy].toLowerCase() : a[sortBy].toString();
         const compareValueB = typeof b[sortBy] === 'string' ? b[sortBy].toLowerCase() : b[sortBy].toString();
@@ -214,7 +215,7 @@ className="select-rangedate"
 value={sortBy}
 onChange={e => handleSelectedSort(e.target.value)}
 >
-<option value="all" selected>Order: N/A</option>
+<option value="all" selected>Order: N/A</option> 
 {columns.map((val, key) => {
                 return(
                   <option value={val}>{val}</option>
