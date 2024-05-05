@@ -137,7 +137,7 @@ const Table = () =>{
       return filterOne && filterTwo;
     })
     .sort((a, b) => {
-      if (sortBy && sortBy != 'all') {
+      if (sortBy && sortBy !== 'all') {
         console.log(sortBy)
       
         const compareValueA = typeof a[sortBy] === 'string' ? a[sortBy].toLowerCase() : a[sortBy].toString();
